@@ -47,7 +47,7 @@ export const useStore = defineStore('store', {
         this.history = {
           past: newPast,
           present: previous,
-          future: [this.history.present, ...this.history.future],
+          future: [...this.history.future, this.history.present],
         }
       }
     },
